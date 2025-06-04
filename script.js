@@ -16,7 +16,7 @@ function calculate(value){
 }
 
 
-function ClearDisplay(value){
+function clearDisplay(){
     currentInput = '';
     document.getElementById('display').value = '';
 }
