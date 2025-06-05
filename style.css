@@ -1,71 +1,91 @@
 body {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #eef;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(to right, #c9d6ff, #e2e2e2);
 }
 
 .caculator {
-    background: wheat;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 0 10px #ccc;
-    width: 90vw;
-    max-width: 400px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 90vw;
+  max-width: 360px;
+}
+.backspace {
+  background-color: #ffa726;
+  color: white;
+}
+
+.backspace:hover {
+  background-color: #fb8c00;
 }
 
 #display {
-    width: 100%;
-    height: 50px;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    text-align: right;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+  width: 100%;
+  height: 60px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: right;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
 }
 
 .buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
 }
 
 button {
-    height: 50px;
-    font-size: 1.2rem;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    background-color: #f3f3f3;
-    transition: background-color 0.2s;
+  height: 60px;
+  font-size: 1.5rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  transition: background-color 0.2s, transform 0.1s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 button:hover {
-    background-color: #ddd;
+  background-color: #ddd;
+}
+
+button:active {
+  transform: scale(0.95);
 }
 
 .clear {
-    grid-column: span 4;
-    background-color: #f66;
-    color: white;
+  grid-column: span 4;
+  background-color: #f44336;
+  color: white;
 }
 
-/* 🌐 Responsive: Điều chỉnh font và nút cho điện thoại nhỏ hơn */
+.clear:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsive điều chỉnh cho điện thoại */
 @media (max-width: 480px) {
-    #display {
-        height: 45px;
-        font-size: 1.2rem;
-    }
+  #display {
+    font-size: 1.5rem;
+    height: 50px;
+  }
 
-    button {
-        height: 45px;
-        font-size: 1rem;
-    }
+  button {
+    height: 50px;
+    font-size: 1.2rem;
+  }
 
-    .caculator {
-        padding: 15px;
-    }
+  .caculator {
+    padding: 15px;
+  }
 }
