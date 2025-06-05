@@ -14,7 +14,7 @@ body {
   border-radius: 20px;
   padding: 20px;
   box-shadow: 10px 10px 30px rgba(0,0,0,0.1);
-  width: 90vw;
+  width: 90%;
   max-width: 360px;
 }
 
@@ -35,7 +35,7 @@ body {
 
 .buttons {
   display: grid;
-  grid-template-columns: repeat(4, 60px);
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   justify-content: center;
 }
@@ -43,6 +43,7 @@ body {
 
 button {
   height: 60px;
+  width: 100%;
   font-size: 1.5rem;
   border-radius: 12px;
   border: none;
@@ -61,7 +62,7 @@ button:active {
 }
 
 .clear {
-  grid-column: span 4;
+  grid-column: span 2;
   background-color: #f44336;
   color: white;
 }
@@ -72,7 +73,7 @@ button:active {
 
 .backspace {
   background-color: #ffa726;
-  grid-column: span 4;
+  grid-column: span 2;
   color: white;
 }
 
