@@ -6,12 +6,13 @@ function press(value){
 }
 
 
-function calculate(value){
-    try{
-        currentInput = eval(currentInput).toString();
-        document.getElementById('display').value = currentInput;
-    }catch(e){
-        document.getElementById('display').value = "Lỗi";
+function calculate() {
+    try {
+        display.value = eval(display.value);
+        display.classList.add('flash');
+        setTimeout(() => display.classList.remove('flash'), 300);
+    } catch {
+        display.value = 'Error';
     }
 }
 
